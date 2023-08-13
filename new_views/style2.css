@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Barlow+Condensed:wght@600&family=Barlow+Semi+Condensed:wght@500;600&family=Oswald&family=Outfit:wght@400;700&family=Patrick+Hand&family=Playfair+Display&family=Potta+One&family=Roboto&family=Secular+One&family=Space+Mono:wght@700&family=Tilt+Neon&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Tilt Neon', cursive;
+}
+.navbar{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: blue;
+    /* border: 2px solid red; */
+    height: 5rem;
+    
+    width: 100vw;
+}
+.nav-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1.3rem;
+    color: white;
+}
+.nav-left img{
+    clip-path: circle();
+}
+.nav-middle{
+    display: flex;
+    column-gap: 3rem;
+}
+.nav-middle a{
+   text-decoration: none;
+   color: white;
+   font-size: 1.3rem;
+}
+.nav-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(255, 255, 255);
+    height: 4rem;
+    width: 4rem;
+    border-radius: 35px;
+}
+.nav-right img{
+    clip-path: circle();
+    height: 3.6rem;
+    width: 3.6rem;
+}
+#record{
+    width: 100vw;
+    height: 27rem;
+    
+    
+}
+#student-record{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+    row-gap: 1rem;
+    font-size: 1rem;
+}
+.student{
+    
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid red; */
+    height: 20rem;
+    width: 31%;
+    
+    justify-content: center;
+    align-items: center;
+    
+    row-gap: 2.4rem;
+    background-color:antiquewhite;
+    border-radius: 17px;
+    font-size: 1.2rem;
+}
+
+#teacher{
+    /* width: 100vw; */
+    /* height: 60rem; */
+    display: flex;
+    flex-direction: column;
+    margin-block: 3rem;
+    row-gap: 2rem;
+    
+    
+    
+}
+#teacher a {
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+#teacher h1 , a{
+    text-align: center;
+}
+.teacher{
+    display: block;
+    height: 43.5rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 70%;
+    margin: 0 auto;
+
+}
+.students{
+    border: 2px solid rgba(0, 0, 0, 0.342);
+    height: 6rem;
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: 2rem;
+    padding-right: 1rem;
+    background-color: antiquewhite;
+    border-bottom: none;
+    border-radius: 16px;
+    
+}
+.right-part{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 0.8rem;
+}
+.left-part h1{
+    margin-left: 1rem;
+    font-size: 1.2rem;
+}
+footer{
+    width: 100vw;
+    background-color: rgba(29, 17, 17, 0.8);
+    
+}
+footer p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 4rem;
+    color: white;
+    font-size: 1.3rem;
+}

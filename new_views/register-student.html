@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+    <style>
+        #webcam {
+            position: relative;
+            top: 1%;
+            left: 1%;
+        }
+
+        #image_overlay {
+            position: relative;
+            top: -100%;
+            left: 1%;
+        }
+
+        .loader {
+            position: absolute;
+            top: 15%;
+            left: 30%;
+            border: 32px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 32px solid #3498db;
+            width: 350px;
+            height: 350px;
+            -webkit-animation: spin 2s linear infinite;
+            /* Safari */
+            animation: spin 2s linear infinite;
+        }
+
+        /* Safari */
+        @-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<div class="loader"></div>
+<script src="./tensorflow/@1.7.0tf.min.js"></script>
+<script src="./tensorflow/face_api/dist/face-api.js"></script>
+<script defer src="./tensorflow/face.js"></script>
+
+<body class="flex justify-center items-center h-full flex-col mt-36">
+    <div class="flex space-x-5">
+        <form action="" method="post"
+            class="w-[25rem] h-[30rem] border flex flex-col items-center justify-center gap-8 mb-10 border-2 border-blue-600 rounded-xl">
+            <input id="name" type="text" placeholder="Enter Your Name"
+                class=" w-[87%] border-b-2 pt-2 pb-2 border-blue-500 focus:outline-none">
+            <input id="scholarid" type="number" placeholder="Enter Your Scholar ID"
+                class=" w-[87%] border-b-2 pt-2 pb-2 border-blue-500 focus:outline-none">
+            <input id="password" type="password" placeholder="Enter Your Password"
+                class=" w-[87%]  border-b-2 pt-2 pb-2 border-blue-500 focus:outline-none">
+            <input type="password" placeholder="Confirm Your Password"
+                class=" w-[87%]  border-b-2 pt-2 pb-2 border-blue-500 focus:outline-none">
+            <input id="email" type="email" placeholder="Enter Your Email"
+                class=" w-[87%]  border-b-2 pt-2 pb-2 border-blue-500 focus:outline-none">
+            <input type="submit" value="Register"
+                class="border border-blue-600 bg-blue-600 w-32 h-10 rounded-md text-white text-lg font-medium">
+            <div class="location"></div>
+            <div class="error" style="background-color: rgb(224, 116, 116);"></div>
+        </form>
+
+        <div
+            class="flex flex-col border-2 border-blue-600 w-[25rem] h-[30rem] rounded-xl space-y-10 justify-center items-center">
+            <div class="w-[90%] h-[65%] border-2">
+                <video autoplay playsinline muted id="webcam" width="400" height="400"></video>
+                <canvas id="image_overlay"></canvas>
+            </div>
+            <div class="space-x-4">
+                <!--
+                <button type="submit" id="recognize"
+                 class="bg-blue-600 text-white h-10 w-16 rounded-md hover:bg-blue-700">Test</button>
+                -->
+                <button type="submit" id="capture"
+                    class="bg-blue-600 text-white h-10 w-16 rounded-md hover:bg-blue-700">Capture</button>
+                <button type="submit" id="send"
+                    class="bg-blue-600 text-white h-10 w-16 rounded-md hover:bg-blue-700">Send</button>
+                <button type="submit" id="recognize"
+                    class="bg-blue-600 text-white h-10 w-24 rounded-md hover:bg-blue-700">Recognize</button>
+                <br>
+                <div id="captured_descriptors"></div>
+            </div>
+
+        </div>
+    </div>
+    <a href="/" class="text-lg text-white bg-blue-600 h-10 w-48 flex items-center justify-center rounded-md p-2">Back To
+        HomePage</a>
+    <script src="./register-student.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Attendify</title>
+</head>
+<body class="overflow-x-hidden">
+    
+        <nav class="h-20 w-full  flex  justify-between items-center pl-20 pr-20 mb-16">
+            <h1 class="text-3xl font-bold">Attendify</h1>
+            <div class="flex text-2xl font-semibold space-x-12">
+                <a href="/">Home</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact Us</a>
+                <a href="">Records</a>
+            </div>
+            <div class="rounded-full border border-black">
+               <img src="user.png" alt="" class="rounded-full h-14 w-14 p-1"> 
+            </div>
+        </nav>
+     
+    <section class="h-[42rem] w-[100%] flex justify-center items-center space-x-20">
+        <div class="flex flex-col space-y-10 w-[33rem]">
+            <h1 class="text-5xl font-bold">Welcome to Attendify</h1>
+            <h1 class="text-2xl font-semibold">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla aliquid facere ullam pariatur corporis deleniti iusto impedit ipsum magnam temporibus.</h1>
+            <div>
+                <a href="/new_views/teacher-login" class="text-2xl border-2 border-blue-600 rounded-lg p-2 mr-5 bg-blue-600 text-white">Login as a Teacher</a>
+                <a href="/new_views/student-login" class="text-2xl border-2 border-blue-600 rounded-lg p-2 bg-blue-600 text-white">Login as a Student</a>
+                
+            </div>
+        </div>
+        <div>
+            <img src="blog67.webp" alt="" class="h-[36rem] w-[50rem]">
+        </div>
+    </section>
+    <section class="flex justify-center items-center flex-col h-[30rem] space-y-16" id="about">
+        <h1 class="text-5xl font-bold">About Us</h1>
+        <p class="text-lg font-large w-[70%] text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, dolor facere. Perferendis fugiat enim, aut quas iusto debitis commodi atque ipsum ut at. Nam adipisci eveniet, neque et nulla debitis repellat earum totam recusandae repellendus maxime blanditiis minus nobis laudantium ut rerum commodi facere velit voluptatibus quae? Facilis, quisquam accusantium. Nam sunt quibusdam perferendis neque molestias? Repellat officia quidem recusandae eveniet modi quasi explicabo saepe reprehenderit quae, qui earum molestias magni ratione ipsam nam nulla quam numquam possimus deleniti quod!</p>
+        <div class="border-4 border-blue-600 w-44 rounded-full"></div>
+    </section>
+    <section class="flex justify-center items-center flex-col" id="contact">
+        <h1 class="text-5xl font-bold">Contact Us</h1>
+        <form action="" method="post" class="flex flex-col space-y-8 mt-20 w-[35rem] p-5 rounded-xl h-[24rem] bg-neutral-700 pt-5">
+            <input type="text" name="yourname" placeholder="Type Your Name" class="rounded-lg h-10 p-2 focus:outline-none">
+            <input type="email" name="email" placeholder="Type Your Email" class="rounded-lg h-10 p-2 focus:outline-none">
+            <textarea name="message" id="" cols="30" rows="10" placeholder="Leave Your Message Here" class="rounded-lg h-52 p-2 focus:outline-none"></textarea>
+        </form>
+    </section>
+    <footer class="flex h-16 w-full justify-center items-center bg-neutral-800 text-white mt-10">
+        <h1 class="text-xl font-medium">Copyright@2023 All rights reserved | This template is made by Geeky Army</h1>
+    </footer>
+</body>
+</html>

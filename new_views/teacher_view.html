@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style2.css">
+    <script src="https://kit.fontawesome.com/db21924de1.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <section id="teacher">        
+        <script>
+            const ul = document.querySelector('ul');
+            const getUsers = async () => {
+                const res = await fetch('/api/auth/getUsers')
+                const data = await res.json()
+                data.user.map((mappedUser) => {
+                    if (mappedUser.username !== 'admin') {
+                        let li = `<li> <b>Username</b> => ${mappedUser.username} <br> <b>Role</b> => ${mappedUser.role} </li>`
+                        ul.innerHTML += li
+                    } else {
+                        return null
+                    }
+                })
+            }
+            getUsers()
+        </script>
+
+
+        <h1>For Teachers</h1>
+        <a href="">Click Here To Check Out The Records Of Students</a>
+        <div class="teacher">
+            <div class="students" id="student-1">
+                <div class="left-part">
+
+                    <h1>2214011</h1>
+
+                </div>
+                <div class="right-part">
+                    <p>Present: 20</p>
+                    <p>Absent: 4</p>
+                    <p>% Attendance: 75%</p>
+
+                </div>
+
+            </div>
+            <div class="students" id="student-1">
+                <div class="left-part">
+
+                    <h1>2214011</h1>
+
+                </div>
+                <div class="right-part">
+                    <p>Present: 20</p>
+                    <p>Absent: 4</p>
+                    <p>% Attendance: 75%</p>
+
+                </div>
+
+            </div>
+            <div class="students" id="student-1">
+                <div class="left-part">
+
+                    <h1>2214011</h1>
+
+                </div>
+                <div class="right-part">
+                    <p>Present: 20</p>
+                    <p>Absent: 4</p>
+                    <p>% Attendance: 75%</p>
+
+                </div>
+
+            </div>
+            <div class="students" id="student-1">
+                <div class="left-part">
+
+                    <h1>2214011</h1>
+
+                </div>
+                <div class="right-part">
+                    <p>Present: 20</p>
+                    <p>Absent: 4</p>
+                    <p>% Attendance: 75%</p>
+
+                </div>
+
+            </div>
+            <div class="students" id="student-1">
+                <div class="left-part">
+
+                    <h1>2214011</h1>
+
+                </div>
+                <div class="right-part">
+                    <p>Present: 20</p>
+                    <p>Absent: 4</p>
+                    <p>% Attendance: 75%</p>
+
+                </div>
+
+            </div>
+            <div class="students" id="student-1">
+                <div class="left-part">
+
+                    <h1>2214011</h1>
+
+                </div>
+                <div class="right-part">
+                    <p>Present: 20</p>
+                    <p>Absent: 4</p>
+                    <p>% Attendance: 75%</p>
+
+                </div>
+
+            </div>
+            <div class="students" id="student-1">
+                <div class="left-part">
+
+                    <h1>2214011</h1>
+
+                </div>
+                <div class="right-part">
+                    <p>Present: 20</p>
+                    <p>Absent: 4</p>
+                    <p>% Attendance: 75%</p>
+
+                </div>
+
+            </div>
+            <div class="students" id="student-1">
+                <div class="left-part">
+
+                    <h1>2214011</h1>
+
+                </div>
+                <div class="right-part">
+                    <p>Present: 20</p>
+                    <p>Absent: 4</p>
+                    <p>% Attendance: 75%</p>
+
+                </div>
+
+            </div>
+            <div class="students" id="student-1">
+                <div class="left-part">
+
+                    <h1>2214011</h1>
+
+                </div>
+                <div class="right-part">
+                    <p>Present: 20</p>
+                    <p>Absent: 4</p>
+                    <p>% Attendance: 75%</p>
+
+                </div>
+
+            </div>
+            <div class="students" id="student-1">
+                <div class="left-part">
+
+                    <h1>2214011</h1>
+
+                </div>
+                <div class="right-part">
+                    <p>Present: 20</p>
+                    <p>Absent: 4</p>
+                    <p>% Attendance: 75%</p>
+
+                </div>
+
+            </div>
+            <div class="students" id="student-1">
+                <div class="left-part">
+
+                    <h1>2214011</h1>
+
+                </div>
+                <div class="right-part">
+                    <p>Present: 20</p>
+                    <p>Absent: 4</p>
+                    <p>% Attendance: 75%</p>
+
+                </div>
+
+            </div>
+            <div class="students" id="student-1">
+                <div class="left-part">
+
+                    <h1>2214011</h1>
+
+                </div>
+                <div class="right-part">
+                    <p>Present: 20</p>
+                    <p>Absent: 4</p>
+                    <p>% Attendance: 75%</p>
+
+                </div>
+
+            </div>
+            <div class="students" id="student-1">
+                <div class="left-part">
+
+                    <h1>2214011</h1>
+
+                </div>
+                <div class="right-part">
+                    <p>Present: 20</p>
+                    <p>Absent: 4</p>
+                    <p>% Attendance: 75%</p>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>

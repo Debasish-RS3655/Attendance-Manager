@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+
+<body class="flex justify-center items-center flex-col h-full w-full mt-44">
+    <form action="" method=""
+        class="w-[25rem] h-[20rem] border flex flex-col items-center justify-center gap-8 mb-10 border-2 border-blue-600 rounded-xl">
+        <input type="text" placeholder="Create Your Username"
+            class=" w-[87%] border-b-2 pt-2 pb-2 border-blue-500 focus:outline-none">
+        <input type="password" placeholder="Create Your Password"
+            class=" w-[87%] border-b-2 pt-2 pb-2 border-blue-500 focus:outline-none">
+        <input type="password" placeholder="Confirm Your Password"
+            class=" w-[87%]  border-b-2 pt-2 pb-2 border-blue-500 focus:outline-none">
+        <button id="registerBtn"
+            class="border border-blue-600 bg-blue-600 w-32 h-10 rounded-md text-white text-lg font-medium">Register</button>
+        <div class="location"></div>
+    </form>
+    <a href="/index.html"
+        class="text-lg text-white bg-blue-600 h-10 w-48 flex items-center justify-center rounded-md p-2">Back To
+        HomePage</a>
+    <script>
+        (() => {
+            const locElement = document.querySelector(".location");
+            if (navigator.geolocation) {
+                //display the position if it is supported in the browser
+                navigator.geolocation.getCurrentPosition(pos => {
+                    locElement.innerHTML = `Your position is Lat:${pos.coords.latitude} Long:${pos.coords.longitude}`
+                })
+            }
+            else locElement.innerHTML = "Geolocation is not allowed in this browser. Please use one where it is supported."
+        })();
+
+        document.getElementById('registerBtn').addEventListener('click', () => {
+            location.assign('/new_views/teacher-record');
+        })
+    </script>
+</body>
+
+</html>
